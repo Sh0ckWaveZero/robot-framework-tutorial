@@ -19,16 +19,19 @@ ${BROWSER_HEIGHT}     1080
 
 *** Keywords ***
 เปิด google chrome
-   Open Browser      ${BASE_URL}    chrome
+   Open Browser      ${BASE_URL}    ${browser}
    Set Window Size   ${BROWSER_WIDTH}     ${BROWSER_HEIGHT}
-   #Maximize Browser Window
-   Sleep   20s
+    
+ระบุ username
+    Input Text    id=login    ${ADMIN_USERNAME}
 
-#ระบุ username
+ระบุ password
+    Input Text    id=password    ${ADMIN_PASSWORD}
 
-#ระบุ password
+คลิกปุ่ม SIGN IN
+    Click Button   id=loginbutton
+    Sleep    20s
 
-#คลิกปุ่ม SIGN IN
 
 #ตรวจสอบว่าชื่อ user ปรากฎบน toolbar
      #//button//span[contains(text(), "Chaiyanan")]
@@ -36,7 +39,7 @@ ${BROWSER_HEIGHT}     1080
 *** Test Cases ***
 CN-0001 - Login เข้าสู่ระบบด้วย admin user
     เปิด google chrome
-    #ระบุ username
-    #ระบุ password
-    #คลิกปุ่ม SIGN IN
+    ระบุ username
+    ระบุ password
+    คลิกปุ่ม SIGN IN
     #ตรวจสอบว่าชื่อ user ปรากฎบน toolbar
