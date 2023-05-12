@@ -29,6 +29,12 @@ robot --version
 
 ```
 
+Install [SeleniumLibrary](https://github.com/robotframework/SeleniumLibrary)
+
+```bash
+pip install --upgrade robotframework-seleniumlibrary
+```
+
 Install webdrivermanager
 
 ```bash
