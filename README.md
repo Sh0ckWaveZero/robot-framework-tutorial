@@ -19,27 +19,8 @@ python -m venv myenv
 source ./myenv/bin/activate
 ```
 
-Installing Robot Framework with pip is simple:
+Installing library
 
 ```bash
-pip install robotframework
-
-#To check that the installation was succesful, run
-robot --version
-
-```
-
-Install [SeleniumLibrary](https://github.com/robotframework/SeleniumLibrary)
-
-```bash
-pip install --upgrade robotframework-seleniumlibrary
-```
-
-Install webdrivermanager
-
-```bash
-pip install webdrivermanager
-
-#install webdrivermanager chrome
-webdrivermanager chrome
+pip install -r requirements.txt
 ```
